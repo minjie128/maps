@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Assignment 4: Maps</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Maps</h1>
+      <form id="map-form" class="form-inline">
+        <label for="location">Select a point of interest: </label>
+        <select class="form-control input-sm" id="location">
+          <option value="" hidden>-- Select One --</option>
+          <option value="pike+place+market">Pike Place Market</option>
+          <option value="navy+pier">Navy Pier</option>
+          <option value="golden+gate+bridge">Golden Gate Bridge</option>
+          <option value="sydney+opera+house">Sydney Opera House</option>
+          <option value="great+wall+of+china">Great Wall of China</option>
+          <option value="palace+of+versailles">Palace of Versailles</option>
+        </select>
+        <br>
+        Or enter coordinates to find a place:
+        Latitude <input class="form-control input-sm" type="number" step="any" id="latitude" placeholder="between -90 and 90">
+        Longitude <input class="form-control input-sm" type="number" step="any" id="longitude" placeholder="between -180 and 180">
+        <br>
+        Choose perferred map type and zoom level:
+        <br>
+        <label for="map-type">Map Type </label>
+        <select class="form-control input-sm" id="map-type">
+          <option value="roadmap">Roadmap</option>
+          <option value="satellite">Satellite</option>
+          <option value="terrain">Terrain</option>
+          <option value="hybrid">Hybrid</option>
+        </select>
+        Zoom <input class="form-control input-sm" type="number" id="zoom" placeholder="between 0 and 21">
+        <button type="submit" class="btn btn-primary btn-sm">Find Your Map</button>
+      </form>
+      <img id="map" src="https://maps.googleapis.com/maps/api/staticmap?zoom=1&size=800x450&maptype=roadmap&key=AIzaSyA3JqL8hT9OyfKrLJqQDcX2gEwstlwi_uU" alt="Google Static Maps">
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
